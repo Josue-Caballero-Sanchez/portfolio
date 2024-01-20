@@ -85,8 +85,12 @@ header{
         display: none;
         width: 100%;
         flex-direction: column;
-        width: 100%;
         padding-left: 1.5vw;
+        margin-top: -1vh;
+    }
+
+    .navbar-links li{
+        width: 97%;
     }
 
     .header-title{
@@ -102,9 +106,10 @@ header{
     .navbar-links li{
         font-size: 1rem;
     }
+
     .active{
         display: flex;
-        margin-bottom: 1vh;
+        padding-bottom: 1vh;
 
         animation: expand 375ms ease-in-out;
         transform-origin: top;
@@ -112,7 +117,6 @@ header{
 
     .active-reverse {
         display: flex;
-        margin-bottom: 1vh;
         animation: expand-reverse 375ms ease-in-out;
         transform-origin: top;
     }
