@@ -16,6 +16,7 @@ body{
 header{
     display: flex;
     align-items: center;
+    background-color: rgb(45, 45, 45);
 }
 
 .toggle-button-container{
@@ -23,6 +24,7 @@ header{
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(45, 45, 45);
 }
 
 .header-title{
@@ -31,23 +33,25 @@ header{
     margin-left: 4vw;
 }
 
-nav ul{
+.navbar-links{
     display: flex;
     margin-right: 2vw;
+    background-color: rgb(45, 45, 45);
 }
 
-nav li{
+
+.navbar-links li{
     list-style: none;
 }
 
-nav li a{
+.navbar-links li a{
     text-decoration: none;
     color: white;
     padding: 2vh;
     display: block;
 }
 
-nav li:hover{
+.navbar-links li:hover{
     background-color: #555;
     border-radius: 10px;
 }
@@ -69,6 +73,10 @@ nav li:hover{
 }
 
 @media (max-width: 500px){
+    header{
+        background-color: transparent;
+    }
+
     .header-toggle-button{
         display: flex;
     }
@@ -76,11 +84,14 @@ nav li:hover{
     .navbar-links{
         display: none;
         width: 100%;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 1.5vw;
     }
 
     .header-title{
-        margin: 3vh;
-        font-size: 1.5rem;
+        margin: 2.5vh;
+        font-size: 1.25rem;
     }
 
     header{
@@ -88,19 +99,21 @@ nav li:hover{
         align-items: flex-start;
     }
 
-    .navbar-links ul{
-        flex-direction: column;
-        width: 100%;
-        margin-left: 1.5vw;
-    }
-
     .navbar-links li{
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
     .active{
         display: flex;
+        margin-bottom: 1vh;
 
-        animation: expand 300ms ease-in-out;
+        animation: expand 375ms ease-in-out;
+        transform-origin: top;
+    }
+
+    .active-reverse {
+        display: flex;
+        margin-bottom: 1vh;
+        animation: expand-reverse 375ms ease-in-out;
         transform-origin: top;
     }
 
@@ -109,12 +122,27 @@ nav li:hover{
           transform: scaleY(0);
         }
       
-        60% {
-          transform: scaleY(1.2);
+        65% {
+          transform: scaleY(1.25);
         }
         
         100% {
           transform: scaleY(1);
         }
-      }
+    }
+
+    @keyframes expand-reverse {
+        0% {
+            transform: scaleY(1);
+        }
+    
+        35% {
+            transform: scaleY(1.25);
+        }
+    
+        100% {
+            transform: scaleY(0);
+        }
+    }
+
 }
