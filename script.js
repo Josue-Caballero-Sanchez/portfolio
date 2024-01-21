@@ -2,6 +2,7 @@ const main = (() =>{
 
     const headerToggleButton = document.querySelector(".header-toggle-button");
     const navbarLinks = document.querySelector(".navbar-links");
+    const titles = document.querySelectorAll(".title");
 
     headerToggleButton.addEventListener("click", () =>{
         if (navbarLinks.classList.contains("active")) {
@@ -19,4 +20,15 @@ const main = (() =>{
             navbarLinks.style.display = "flex";
         }
     });
+
+    function titleAnimation(index){
+        titles[index].classList.add("title-animation");
+    }
+
+    titleAnimation(0);
+    titleAnimation(1);
+
+    
+
+
 })();
