@@ -62,7 +62,7 @@ const main = (() => {
     });
 
     function moveCarousell(){
-        const maxScroll = imageList.scrollWidth - imageList.clientWidth;
+        const maxScroll = imageList.scrollWidth - imageList.clientWidth - 75;
         const scrollAmount = imageList.clientWidth * multiplier;
 
         if(isCarouselInMotion || isDragging){
@@ -71,10 +71,7 @@ const main = (() => {
         if (imageList.scrollLeft === imageList.scrollWidth - imageList.clientWidth) {
             return;
         }
-        if (
-            (multiplier < 0 && imageList.scrollLeft > 0) ||
-            (multiplier > 0 && imageList.scrollLeft < maxScroll)
-        ) {
+        if ((multiplier > 0 && imageList.scrollLeft < maxScroll)) {
             imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
         }
     }
