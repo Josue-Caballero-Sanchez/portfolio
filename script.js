@@ -45,7 +45,7 @@ const main = (() => {
     let multiplier = 0.15;
 
     if(screenWidth < 501){
-        multiplier = 0.7;
+        multiplier = 0.35;
     }
 
     imageList.addEventListener("scroll", () => {
