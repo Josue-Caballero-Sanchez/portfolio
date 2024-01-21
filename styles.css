@@ -156,6 +156,7 @@ main{
     scrollbar-width: none;
     margin-bottom: 2vh;
     max-width: 100%;
+    padding-right: 10px;
 }
 
 .slider-wrapper .image-list::-webkit-scrollbar{
@@ -323,6 +324,10 @@ main{
         justify-content: flex-start;
     }
 
+    .slider-wrapper .image-list{
+        padding-right: 1px;
+    }
+
     .slider-wrapper .image-list .image-item{
         object-fit: cover;
         height: 35%;
@@ -365,5 +370,9 @@ main{
 
     .slide-button{
         display: none;
+    }
+
+    .slider-wrapper .image-list{
+        padding-right: 2px;
     }
 }
