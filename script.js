@@ -1,4 +1,4 @@
-const main = (() =>{
+const main = (() => {
 
     const headerToggleButton = document.querySelector(".header-toggle-button");
     const navbarLinks = document.querySelector(".navbar-links");
@@ -23,12 +23,82 @@ const main = (() =>{
 
     function titleAnimation(index){
         titles[index].classList.add("title-animation");
+        titles[index].style.color = "white";
     }
 
     titleAnimation(0);
-    titleAnimation(1);
-
+    setTimeout(function() {
+        titleAnimation(1);
+    }, 300);
     
+    const imageList = document.querySelector(".slider-wrapper .image-list");
+    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+    const container = document.querySelector(".container");
+    
+    let isCarouselInMotion = false;
+    const screenWidth = window.screen.width;
+    let scrollTimeout;
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
 
+    let multiplier = 0.15;
+
+    if(screenWidth < 501){
+        multiplier = 0.7;
+    }
+
+    imageList.addEventListener("scroll", () => {
+        isCarouselInMotion = true;
+    });
+
+    function handleScrollEnd() {
+        isCarouselInMotion = false;
+    }
+
+    imageList.addEventListener("scroll", () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(handleScrollEnd, 200); 
+    });
+
+    function moveCarousell(){
+        if(isCarouselInMotion || isDragging){
+            return;
+        }
+        const scrollAmount = imageList.clientWidth * multiplier;
+        imageList.scrollBy({ left: scrollAmount, behavior: "smooth"});
+    }
+
+    setInterval(moveCarousell, 1500);
+
+    slideButtons.forEach(button =>{
+        button.addEventListener("click", () =>{
+            const direction = button.id === "prev-slide" ? -multiplier : multiplier;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth"});
+        })
+    })
+
+    container.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        startX = e.pageX - imageList.offsetLeft;
+        scrollLeft = imageList.scrollLeft;
+      });
+
+      container.addEventListener("mouseleave", () => {
+        isDragging = false;
+      });
+    
+      container.addEventListener("mouseup", () => {
+        isDragging = false;
+      });
+    
+      container.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - imageList.offsetLeft;
+        const walk = (x - startX) * 1;
+        imageList.scrollLeft = scrollLeft - walk;
+      });
 
 })();
