@@ -170,6 +170,7 @@ main{
     height: 10vw;
     font-size: 0.75rem;
     align-items: center;
+    justify-content: center;
     font-weight: bold;
 }
 
@@ -319,6 +320,7 @@ main{
         font-size: 0.6rem;
         min-width: 80px;
         min-height: 80px;
+        justify-content: flex-start;
     }
 
     .slider-wrapper .image-list .image-item{
@@ -332,9 +334,13 @@ main{
         object-fit: contain;
     }
 
+    .slide-button{
+        display: none;
+    }
+
 }   
 
-@media (min-width: 500px) and (max-width: 1024px){
+@media (min-width: 500px) and (max-width: 1000px){
     main{
         margin: 10vh;
     }
@@ -343,6 +349,7 @@ main{
         width: 20vw;
         height: 20vw;
         font-size: 0.75rem;
+        justify-content: flex-start;
     }
 
     .slider-wrapper .image-list .image-item{
@@ -354,5 +361,9 @@ main{
 
     .slider-wrapper .image-list .npm-image{
         object-fit: contain;
+    }
+
+    .slide-button{
+        display: none;
     }
 }
