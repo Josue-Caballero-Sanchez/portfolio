@@ -332,10 +332,11 @@ main{
 
     .slider-wrapper .image-list .image-item{
         object-fit: cover;
-        height: 35%;
+        height: 50%;
         width: auto;
         max-width: 70%;
-        margin-top: -1.5vh
+        padding: 0;
+        padding-bottom: 2vh;
     }
     
     .slider-wrapper .image-list .npm-image{
@@ -356,7 +357,7 @@ main{
     .slider-wrapper .image-list div{
         width: 14vw;
         height: 14vw;
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
 
     .slider-wrapper .image-list .image-item{
