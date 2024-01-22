@@ -29,7 +29,7 @@ const main = (() => {
     titleAnimation(0);
     setTimeout(function() {
         titleAnimation(1);
-    }, 300);
+    }, 400);
     
     const imageList = document.querySelector(".slider-wrapper .image-list");
     const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
@@ -43,9 +43,11 @@ const main = (() => {
     let scrollLeft;
 
     let multiplier = 0.15;
+    let scrollMultiplier = 0.15;
 
     if(screenWidth < 501){
         multiplier = 0.35;
+        scrollMultiplier = 0.35;
     }
 
     imageList.addEventListener("scroll", () => {
@@ -63,33 +65,25 @@ const main = (() => {
 
     function moveCarousell(){
         const maxScroll = imageList.scrollWidth - imageList.clientWidth;
-        const scrollAmount = imageList.clientWidth * multiplier;
+        const scrollAmount = imageList.clientWidth * scrollMultiplier;
         const targetScroll = imageList.scrollLeft + scrollAmount;
-        const finalScroll = Math.min(targetScroll, maxScroll);
+        let finalScroll;
 
-        if(finalScroll > maxScroll){
-            return;
+        if(scrollMultiplier > 0){
+            finalScroll = Math.min(targetScroll, maxScroll);
+        }
+        else if(scrollMultiplier < 0){
+            finalScroll = Math.max(targetScroll, 0);
+        }
+
+        if(finalScroll === maxScroll || finalScroll <= 0){
+            scrollMultiplier = scrollMultiplier * -1;
         }
         if(isCarouselInMotion || isDragging){
             return;
         }
 
         imageList.scrollTo({ left: finalScroll, behavior: "smooth" });
-
-        /*
-        if(isCarouselInMotion || isDragging){
-            return;
-        }
-        if (imageList.scrollLeft === imageList.scrollWidth - imageList.clientWidth) {
-            return;
-        }
-        if ((screenWidth < 501 && imageList.scrollLeft < maxScroll)) {
-            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        }
-        if(screenWidth > 501){
-            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        }
-        */
     }
 
     setInterval(moveCarousell, 1500);

@@ -96,21 +96,19 @@ main{
 
 .title-animation{
     display: block;
-    animation: name 850ms ease-in-out;
+    animation: name 900ms ease-in-out;
     transform-origin: bottom;
 }
 
 @keyframes name {
     0% {
       transform: scaleY(0);
-      color: transparent;
     }
     60% {
         transform: scaleY(1.4);
     }
     100% {
       transform: scaleY(1);
-      color: white;
     }
 }
 
