@@ -70,6 +70,9 @@ const main = (() => {
         if(finalScroll > maxScroll){
             return;
         }
+        if(isCarouselInMotion || isDragging){
+            return;
+        }
 
         imageList.scrollTo({ left: finalScroll, behavior: "smooth" });
 

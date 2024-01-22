@@ -127,6 +127,7 @@ main{
 
 .no-border{
     border: none;
+    margin-top: 1vh;
 }
 
 .container{
@@ -314,6 +315,7 @@ main{
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 1px;
     }
 
     .slider-wrapper .image-list div{
@@ -335,7 +337,7 @@ main{
         height: 35%;
         width: auto;
         max-width: 70%;
-        margin-top: -0.75vh
+        margin-top: -1.5vh
     }
     
     .slider-wrapper .image-list .npm-image{
