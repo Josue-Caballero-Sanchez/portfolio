@@ -167,12 +167,13 @@ main{
     border: white 1px solid;
     display: flex;
     flex-direction: column;
-    width: 10vw;
-    height: 10vw;
+    width: 8vw;
+    height: 8vw;
     font-size: 0.75rem;
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    padding: 2vh;
 }
 
 .slider-wrapper .image-list .image-item{
@@ -316,12 +317,13 @@ main{
     }
 
     .slider-wrapper .image-list div{
-        width: 25vw;
-        height: 25vw;
+        width: 22vw;
+        height: 22vw;
         font-size: 0.6rem;
         min-width: 80px;
         min-height: 80px;
-        justify-content: flex-start;
+        justify-content: center;
+        padding: 1vh;
     }
 
     .slider-wrapper .image-list{
@@ -333,6 +335,7 @@ main{
         height: 35%;
         width: auto;
         max-width: 70%;
+        margin-top: -0.75vh
     }
     
     .slider-wrapper .image-list .npm-image{
@@ -345,16 +348,15 @@ main{
 
 }   
 
-@media (min-width: 500px) and (max-width: 1000px){
+@media (min-width: 500px) and (max-width: 1024px){
     main{
         margin: 10vh;
     }
 
     .slider-wrapper .image-list div{
-        width: 20vw;
-        height: 20vw;
+        width: 14vw;
+        height: 14vw;
         font-size: 0.75rem;
-        justify-content: flex-start;
     }
 
     .slider-wrapper .image-list .image-item{
@@ -362,6 +364,7 @@ main{
         height: 50%;
         width: auto;
         max-width: 70%;
+        margin-top: -2vh;
     }
 
     .slider-wrapper .image-list .npm-image{

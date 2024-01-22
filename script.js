@@ -62,9 +62,18 @@ const main = (() => {
     });
 
     function moveCarousell(){
-        const maxScroll = imageList.scrollWidth - imageList.clientWidth - 90;
+        const maxScroll = imageList.scrollWidth - imageList.clientWidth;
         const scrollAmount = imageList.clientWidth * multiplier;
+        const targetScroll = imageList.scrollLeft + scrollAmount;
+        const finalScroll = Math.min(targetScroll, maxScroll);
 
+        if(finalScroll > maxScroll){
+            return;
+        }
+
+        imageList.scrollTo({ left: finalScroll, behavior: "smooth" });
+
+        /*
         if(isCarouselInMotion || isDragging){
             return;
         }
@@ -77,6 +86,7 @@ const main = (() => {
         if(screenWidth > 501){
             imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
         }
+        */
     }
 
     setInterval(moveCarousell, 1500);
