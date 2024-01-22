@@ -31,8 +31,8 @@ const main = (() => {
         titleAnimation(1);
     }, 400);
     
-    const imageList = document.querySelector(".slider-wrapper .image-list");
-    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+    const imageList = document.querySelector(".container .image-list");
+    const slideButtons = document.querySelectorAll(".container .slide-button");
     const container = document.querySelector(".container");
     
     let isCarouselInMotion = false;

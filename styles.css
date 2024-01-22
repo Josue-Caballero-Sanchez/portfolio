@@ -129,41 +129,37 @@ main{
 }
 
 .container{
-    margin-top: 5vh;
+    margin-top: 4vh;
     max-width: 85vw;
     cursor: grab;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 2vw;
+    padding: 1vh
 }
 
 .container:active{
     cursor: grabbing;
 }
 
-.slider-wrapper{
-    max-width: 100%;
-    display: flex;
-    gap: 2.25vw;
-}
-
-.slider-wrapper .image-list{
+.container .image-list{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    gap: 1.5vw;
+    gap: 0.5vw;
     overflow-x: auto;
     scrollbar-width: none;
-    margin-bottom: 2vh;
+    align-items: center;
     max-width: 100%;
     padding-right: 10px;
 }
 
-.slider-wrapper .image-list::-webkit-scrollbar{
+.container .image-list::-webkit-scrollbar{
     display: none;
 }
 
-.slider-wrapper .image-list div{
-    border: white 1px solid;
+.container .image-list div{
+    border: white 1.5px solid;
     display: flex;
     flex-direction: column;
     width: 8vw;
@@ -173,9 +169,10 @@ main{
     justify-content: center;
     font-weight: bold;
     padding: 2vh;
+    margin: 5px;
 }
 
-.slider-wrapper .image-list .image-item{
+.container .image-list .image-item{
     object-fit: cover;
     height: 55%;
     width: auto;
@@ -183,11 +180,11 @@ main{
     max-width: 70%;
 }
 
-.slider-wrapper .image-list .npm-image{
+.container .image-list .npm-image{
     object-fit: contain;
 }
 
-.slider-wrapper .slide-button{
+.container .slide-button{
     background-color: transparent;
     color: white;
     background: transparent;
@@ -314,23 +311,11 @@ main{
         padding-top: 4vh;
     }
 
-    .projects{
-        margin-top: -2vh;
-    }
-
     .section-paragraph{
         margin-top: 2vh;
     }
 
-    .container{
-        margin-top: 3vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 7px;
-    }
-
-    .slider-wrapper .image-list div{
+    .container .image-list div{
         width: 22vw;
         height: 22vw;
         font-size: 0.6rem;
@@ -338,13 +323,14 @@ main{
         min-height: 80px;
         justify-content: center;
         padding: 1vh;
+        margin: 3px;
     }
 
-    .slider-wrapper .image-list{
+    .container .image-list{
         padding-right: 1px;
     }
 
-    .slider-wrapper .image-list .image-item{
+    .container .image-list .image-item{
         object-fit: cover;
         height: 50%;
         width: auto;
@@ -353,7 +339,7 @@ main{
         padding-bottom: 2vh;
     }
     
-    .slider-wrapper .image-list .npm-image{
+    .container .image-list .npm-image{
         object-fit: contain;
     }
 
@@ -382,13 +368,13 @@ main{
         margin-top: -1vh;
     }
 
-    .slider-wrapper .image-list div{
+    .container .image-list div{
         width: 14vw;
         height: 14vw;
         font-size: 0.8rem;
     }
 
-    .slider-wrapper .image-list .image-item{
+    .container .image-list .image-item{
         object-fit: cover;
         height: 50%;
         width: auto;
@@ -396,7 +382,7 @@ main{
         margin-top: -2vh;
     }
 
-    .slider-wrapper .image-list .npm-image{
+    .container .image-list .npm-image{
         object-fit: contain;
     }
 
@@ -404,7 +390,7 @@ main{
         display: none;
     }
 
-    .slider-wrapper .image-list{
+    .container .image-list{
         padding-right: 2px;
     }
 }
