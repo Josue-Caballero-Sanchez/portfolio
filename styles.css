@@ -181,7 +181,8 @@ main{
     object-fit: cover;
     height: 55%;
     width: auto;
-    padding: 2.5vh;
+    padding-bottom: 2.5vh;
+    padding-top: 1vh;
     max-width: 70%;
 }
 
@@ -378,9 +379,9 @@ main{
     }
 
     .container .image-list div{
-        width: 14vw;
-        height: 14vw;
-        font-size: 0.8rem;
+        width: 11.5vw;
+        height: 11.5vw;
+        font-size: 0.7rem;
     }
 
     .container .image-list .image-item{
@@ -388,7 +389,7 @@ main{
         height: 50%;
         width: auto;
         max-width: 70%;
-        margin-top: -2vh;
+        margin-top: -1vh;
     }
 
     .container .image-list .npm-image{
