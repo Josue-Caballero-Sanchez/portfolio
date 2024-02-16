@@ -105,15 +105,31 @@ main{
     transform-origin: bottom;
 }
 
+.title2-animation{
+    display: block;
+    animation: name2 900ms ease-in-out;
+    transform-origin: bottom;
+}
+
 @keyframes name {
     0% {
-      transform: scaleY(0);
-    }
-    60% {
-        transform: scaleY(1.4);
+      transform: translateY(-15vh);
+      opacity: 0;
     }
     100% {
-      transform: scaleY(1);
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+@keyframes name2 {
+    0% {
+      transform: translateY(15vh);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
     }
 }
 

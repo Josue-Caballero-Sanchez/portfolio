@@ -21,15 +21,20 @@ const main = (() => {
         }
     });
 
-    function titleAnimation(index){
+    function titleAnimation1(index){
         titles[index].classList.add("title-animation");
         titles[index].style.color = "white";
     }
 
-    titleAnimation(0);
+    function titleAnimation2(index){
+        titles[index].classList.add("title2-animation");
+        titles[index].style.color = "white";
+    }
+
+    titleAnimation1(0);
     setTimeout(function() {
-        titleAnimation(1);
-    }, 400);
+        titleAnimation2(1);
+    }, 550);
     
     const imageList = document.querySelector(".container .image-list");
     const slideButtons = document.querySelectorAll(".container .slide-button");
