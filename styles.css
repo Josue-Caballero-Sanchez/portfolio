@@ -420,3 +420,11 @@ main{
         padding-right: 2px;
     }
 }
+
+@media (min-width: 1600px){
+    .container .image-list div{
+        width: 7vw;
+        height: 7vw;
+        font-size: 0.9rem;
+    }
+}   
