@@ -9,10 +9,6 @@
     padding: 0;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 body{
     background-color: rgb(36, 36, 36);
 }
@@ -486,6 +482,7 @@ main{
     .contact-buttons-container button{
         padding-left: 7vw;
         padding-right: 7vw;
+        margin-bottom: 5vh;
     }
 
 }   
