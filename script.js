@@ -35,6 +35,22 @@ const main = (() => {
     setTimeout(function() {
         titleAnimation2(1);
     }, 600);
+
+    const links = navbarLinks.querySelectorAll('a[href^="#"]');
+    for(let i = 0; i < links.length; i++){
+        links[i].addEventListener("click", function(e) {
+            if(screenWidth < 501){
+                navbarLinks.classList.remove("active");
+                navbarLinks.classList.add("active-reverse");
+
+                navbarLinks.addEventListener("animationend", () => {
+                    navbarLinks.style.display = "none";
+                }, { once: true });
+            }
+        })
+        
+    }
+
     
     const imageList = document.querySelector(".container .image-list");
     const slideButtons = document.querySelectorAll(".container .slide-button");
@@ -87,7 +103,7 @@ const main = (() => {
         if(isCarouselInMotion || isDragging){
             return;
         }
-
+        
         imageList.scrollTo({ left: finalScroll, behavior: "smooth" });
     }
 
