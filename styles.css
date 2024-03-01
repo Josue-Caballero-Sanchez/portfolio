@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: rgb(36, 36, 36);
 }
@@ -260,11 +264,44 @@ main{
     border: white 1px solid;
     color: white;
     padding: 0.4rem;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
 }
 .project-buttons-container button:hover{
     cursor: pointer;
     background-color: white;
     color: black;
+}
+
+.contact-intro{
+    margin-top: 4vh;
+}
+
+.email{
+    font-size: 1.25rem;
+}
+
+.contact-buttons-container{
+    display: flex;
+    gap: 2%;
+    margin-top: 2vh;
+}
+
+.contact-buttons-container button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.contact-buttons-container button{
+    background-color: transparent;
+    border: white;
+    color: white;
+    font-size: 1rem;
+    border: white solid 1.5px;
+    padding: 1vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
 }
 
 @media (max-width: 500px){
@@ -435,8 +472,20 @@ main{
 
     .project-buttons-container button{
         padding: 0.45rem;
-        padding-left: 6vw;
-        padding-right: 6vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 1.25vh;
+        padding-bottom: 1.25vh;
+        font-size: 0.9rem;
+    }
+
+    .contact-intro{
+        margin-top: 2vh;
+    }
+
+    .contact-buttons-container button{
+        padding-left: 7vw;
+        padding-right: 7vw;
     }
 
 }   
@@ -509,6 +558,10 @@ main{
     .container .image-list div{
         width: 7vw;
         height: 7vw;
+        font-size: 0.9rem;
+    }
+
+    .project-buttons-container button{
         font-size: 0.9rem;
     }
 }   
