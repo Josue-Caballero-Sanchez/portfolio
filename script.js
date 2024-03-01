@@ -34,7 +34,7 @@ const main = (() => {
     titleAnimation1(0);
     setTimeout(function() {
         titleAnimation2(1);
-    }, 550);
+    }, 600);
     
     const imageList = document.querySelector(".container .image-list");
     const slideButtons = document.querySelectorAll(".container .slide-button");

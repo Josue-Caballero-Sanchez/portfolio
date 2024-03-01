@@ -34,6 +34,7 @@ header{
     background-color: rgb(45, 45, 45);
 }
 
+
 .header-title{
     font-size: 1.25rem;
     margin: 4vh;
@@ -215,6 +216,56 @@ main{
     cursor: pointer;
 }
 
+.projects-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 1.5rem;
+    gap: 7vw;
+}
+
+.project-container{
+    border: white 1.5px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2vh;
+}
+
+.project-container > img{
+    max-width: 100%;
+    height: auto;
+}
+
+.project-text{
+    padding: 0.5rem;
+    padding-top: 0;
+    flex: 1;
+}
+
+.project-description{
+    font-size: 0.8rem;
+    padding-top: 0.5rem
+}
+
+.project-buttons-container{
+    display: flex;
+    padding: 0.5rem;
+    padding-top: 15vh;
+    gap: 5%;
+}
+
+.project-buttons-container button{
+    background-color: transparent;
+    border: white 1px solid;
+    color: white;
+    padding: 0.4rem;
+}
+.project-buttons-container button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
 
 @media (max-width: 500px){
     /* header mobile section*/
@@ -373,9 +424,28 @@ main{
         display: none;
     }
 
+    .projects-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .project-buttons-container{
+        padding-top: 8vh;
+    }
+
+    .project-buttons-container button{
+        padding: 0.45rem;
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
 }   
 
 @media (min-width: 500px) and (max-width: 1024px){
+    .header-title{
+        margin: 3.5vh;
+    }
+
     main{
         margin: 10vh;
     }
@@ -418,6 +488,20 @@ main{
 
     .container .image-list{
         padding-right: 2px;
+    }
+
+    .projects-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .project-buttons-container{
+        padding-top: 8vh;
+    }
+
+    .project-buttons-container button{
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
