@@ -314,14 +314,15 @@ main{
         display: none;
         width: 100%;
         flex-direction: column;
-        padding-left: 1.5vw;
+        width: 100%;
         margin-top: -1vh;
         position: absolute;
-        margin-top: 8.1vh;
+        margin-top: 8vh;
     }
 
     .navbar-links li{
         width: 97%;
+        margin-left: 1.5vw;
     }
 
     .header-title{
@@ -483,6 +484,11 @@ main{
         padding-left: 7vw;
         padding-right: 7vw;
         margin-bottom: 5vh;
+    }
+
+    .email{
+        font-size: 1rem;
+        margin-top: 1.5vh
     }
 
 }   

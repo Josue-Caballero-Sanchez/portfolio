@@ -3,6 +3,7 @@ const main = (() => {
     const headerToggleButton = document.querySelector(".header-toggle-button");
     const navbarLinks = document.querySelector(".navbar-links");
     const titles = document.querySelectorAll(".title");
+    const screenWidth = window.screen.width;
 
     headerToggleButton.addEventListener("click", () =>{
         if (navbarLinks.classList.contains("active")) {
@@ -53,7 +54,6 @@ const main = (() => {
     const container = document.querySelector(".container");
     
     let isCarouselInMotion = false;
-    const screenWidth = window.screen.width;
     let scrollTimeout;
     let isDragging = false;
     let startX;
